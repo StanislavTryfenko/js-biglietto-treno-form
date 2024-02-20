@@ -29,6 +29,16 @@ let ticketPrice;
 // #region ticketPrice calc
 
 function calc_ticketPrice(ticketPrice) {
-    if()
+    if(age = 1) {
+        ticketPrice = Number(km * price_km / discountJunior);
+    }
+    else if(age = 2) {
+        ticketPrice = Number(km * price_km / discountSenior);
+    }
+    else {
+        ticketPrice = Number(km * price_km);
+    }
 }
+
+// #endregion
 
