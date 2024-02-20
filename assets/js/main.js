@@ -1,6 +1,6 @@
 // #region vars 
 
-let NameSurname;
+let nameSurname
 
 let km;
 
@@ -24,15 +24,30 @@ let codeTrip; // (Math.floor(Math.random() * 10000) + 1); Obtaining a number fro
 
 let ticketPrice;
 
-// #endregion 
+// #endregion
+
+// #region input from html vars
+
+
+    nameSurname = document.getElementById("nameSurname").value;
+
+    km = document.getElementById("km").value;
+
+    age = document.getElementById("age").value;
+
+console.log(nameSurname);
+console.log(km);
+console.log(age);
+
+// #endregion
 
 // #region ticketPrice calc
 
 function calc_ticketPrice(ticketPrice) {
-    if(age = 1) {
+    if(age = "Under 18") {
         ticketPrice = Number(km * price_km / discountJunior);
     }
-    else if(age = 2) {
+    else if(age = "Over 65") {
         ticketPrice = Number(km * price_km / discountSenior);
     }
     else {
