@@ -16,12 +16,12 @@ va applicato uno sconto del 40% per gli over 65.
 
 1. Definiamo var utili all'esercizio:
 
-    -age (obtain from input)
+    -nameSurname (obtain from input)
     -km (obtain from input)
+    -age (obtain from input)
     -price_1km
     -discountJunion
-    -discountSenior (obtain from input)
-    -nameSurname (obtain from input)
+    -discountSenior 
     -priceJunion 
     -priceSenior
     -priceStandard
