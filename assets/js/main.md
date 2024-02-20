@@ -22,9 +22,9 @@ va applicato uno sconto del 40% per gli over 65.
     -price_1km
     -discountJunion
     -discountSenior 
-    -priceJunion 
-    -priceSenior
-    -priceStandard
+    -priceJunionTag 
+    -priceSeniorTag
+    -priceStandardTag
     -trainCarriage //random (no way rn to have a backend)
     -codeTrip  //random (no way rn to have a backend)
 
