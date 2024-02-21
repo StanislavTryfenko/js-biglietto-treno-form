@@ -1,59 +1,58 @@
-// #region vars 
 
-let nameSurname
+let price_km = Number(0.21);
 
-let km;
+let discountJunior = Number((100 - 20) / 100);
 
-let age;
+let discountSenior = Number((100 - 40) / 100);
 
-const price_km = 0.21;
+let priceJunionTag = ("Biglietto Under 18");
 
-const discountJunior = ((100 - 20) / 100);
+let priceSeniorTag = ("Biglietto Over 65");
 
-const discountSenior = ((100 - 20) / 100);
+let priceStandardTag = ("Biglietto Standard");
 
-const priceJunionTag = ("Biglietto Under 18");
+function addTicket() {
+    let nameSurname = document.getElementById("nameSurname");  
+    let km = document.getElementById("km").value;  
+    let age = document.getElementById("age");
 
-const priceSeniorTag = ("Biglietto Over 65");
-
-const priceStandardTag = ("Biglietto Standard");
-
-let trainCarriage; // (Math.floor(Math.random() * 10) + 1); Obtaining a number from 1 to 10
-
-let codeTrip; // (Math.floor(Math.random() * 10000) + 1); Obtaining a number from 1 to 10000
-
-let ticketPrice;
-
-// #endregion
-
-// #region input from html vars
-
-
-    nameSurname = document.getElementById("nameSurname").value;
-
-    km = document.getElementById("km").value;
-
-    age = document.getElementById("age").value;
-
-console.log(nameSurname);
-console.log(km);
-console.log(age);
-
-// #endregion
-
-// #region ticketPrice calc
-
-function calc_ticketPrice(ticketPrice) {
-    if(age = "Under 18") {
-        ticketPrice = Number(km * price_km / discountJunior);
+    let table = document.getElementById("listTickets");
+    let newRow = table.insertRow();
+    let cell1 = newRow.insertCell(0);
+    let cell2 = newRow.insertCell(1);
+    let cell3 = newRow.insertCell(2);
+    let cell4 = newRow.insertCell(3);
+    let cell5 = newRow.insertCell(4);
+    
+    let ticketPrice;
+    if(age.value === "Under 18") {
+        ticketPrice = Number((km) * (price_km) * Number(discountJunior));
     }
-    else if(age = "Over 65") {
-        ticketPrice = Number(km * price_km / discountSenior);
+    else if(age.value === "Over 65") {
+        ticketPrice = Number(Number(km) * Number(price_km) * Number(discountSenior));
     }
-    else {
-        ticketPrice = Number(km * price_km);
+    else if (age.value === "Standard") {
+        ticketPrice = Number(Number(km) * Number(price_km));
     }
+
+    let trainCarriage = (Math.floor(Math.random() * 10) + 1);
+    let codeTrip = (Math.floor(Math.random() * 10000) + 1);
+
+    cell1.innerHTML = (nameSurname.value);
+    cell2.innerHTML = (age.value);
+    cell3.innerHTML = (trainCarriage);
+    cell4.innerHTML = (codeTrip);
+    cell5.innerHTML = (ticketPrice);
 }
 
-// #endregion
 
+
+
+/* let element_nameSurname = document.getElementById('nameSurname');
+
+element_nameSurname.addEventListener('keydown', HTMLinputs);
+                                                                            VERSIONE REATTIVA da Arthur
+let element_km = document.getElementById('km');
+
+element_km.addEventListener('keydown', myCalcFunction);
+ */

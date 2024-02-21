@@ -18,14 +18,24 @@
         </div>
         <div class="input-group mb-3">
             <select class="form-select" id="age">
-                <option selected>Standard</option>
-                <option value="1">Under 18</option>
-                <option value="2">Over 65</option>
+                <option selected value="Standard">Standard</option>
+                <option value="Under 18">Under 18</option>
+                <option value="Over 65">Over 65</option>
             </select>
           </div>
-        <button type="submit" class="btn btn-primary" id="createTicket">Genera</button>
-        <button type="reset" class="btn btn-primary">Annulla</button>
-      </form>
+          <button type="button" class="btn btn-primary" onclick="addTicket()">Genera</button>        <button type="reset" class="btn btn-primary" id="clearTable">Annulla</button>
+    </form>
+
+    <table id="listTickets">
+        <thead>
+            <td>NOME PASSEGGERO</td>
+            <td>Offerta</td>
+            <td>Carrozza</td>
+            <td>Codice CP</td>
+            <td>Costo Biglietto</td>
+        </thead>
+    </table>
+    
 
     <script src="./assets/js/main.js"></script>
 </body>
