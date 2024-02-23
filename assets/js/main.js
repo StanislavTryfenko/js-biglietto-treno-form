@@ -5,12 +5,6 @@ let discountJunior = Number((100 - 20) / 100);
 
 let discountSenior = Number((100 - 40) / 100);
 
-let priceJunionTag = ("Biglietto Under 18");
-
-let priceSeniorTag = ("Biglietto Over 65");
-
-let priceStandardTag = ("Biglietto Standard");
-
 function addTicket() {
     let nameSurname = document.getElementById("nameSurname").value;  
     let km = document.getElementById("km").value;  
@@ -28,25 +22,27 @@ function addTicket() {
     
     let ticketPrice;
     if(age === "Under 18") {
-        ticketPrice = Number((km) * (price_km) * Number(discountJunior));
+        ticketPrice = Number((km) * (price_km) * (discountJunior));
     }
     else if(age === "Over 65") {
-        ticketPrice = Number(Number(km) * Number(price_km) * Number(discountSenior));
+        ticketPrice = Number((km) * (price_km) * (discountSenior));
     }
     else if (age === "Standard") {
-        ticketPrice = Number(Number(km) * Number(price_km));
+        ticketPrice = Number((km) * (price_km));
     }
 
     let trainCarriage = (Math.floor(Math.random() * 10) + 1);
-    let codeTrip = (Math.floor(Math.random() * 10000) + 1);
+    let codeTrip = (Math.floor(Math.random() * 100000) + 1);
 
     cell1.innerHTML = nameSurname;
     cell2.innerHTML = age;
     cell3.innerHTML = trainCarriage;
     cell4.innerHTML = codeTrip;
     cell5.innerHTML = km;
-    cell6.innerHTML = ticketPrice;
+    cell6.innerHTML = ticketPrice.toFixed(2);
 }
+
+// da mettere nel tbody attualmente le cell sono nel thdead basta creare una tbody e metterci l'id
 
 
 
